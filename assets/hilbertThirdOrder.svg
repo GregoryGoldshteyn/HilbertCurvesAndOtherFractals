@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.0" width="513" height="513" xmlns="http://www.w3.org/2000/svg">
+    <path style="stroke:#f00;stroke-width:8;fill:none" d="M32,32v64h64v-64h64h64v64h-64v64h64v64h-64h-64v-64h-64v64v64h64v64h-64v64v64h64v-64h64v64h64v-64v-64h-64v-64h64h64h64v64h-64v64v64h64v-64h64v64h64v-64v-64h-64v-64h64v-64v-64h-64v64h-64h-64v-64h64v-64h-64v-64h64h64v64h64v-64"/>
+        <defs>
+            <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+                <rect width="64" height="64" fill="url(#smallGrid)"/>
+                <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#000" stroke-width="0.5"/>
+            </pattern>
+        </defs>
+    <rect width="513" height="513" fill="url(#grid)" />
+    <rect x="64" y="64" width="64" height="64" fill="#FAA8" />
+    <rect x="64" y="0" width="64" height="64" fill="#AFA8" />
+    <rect x="128" y="0" width="64" height="64" fill="#AAF8" />
+</svg>
