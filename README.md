@@ -7,21 +7,26 @@
 The first order, or first iteration of the curve, starts with this U shape
 
 ![HilbertFirstOrder](assets/hilbertFirstOrder.svg "First order Hilbert Curve")
+
 The next order is the previous iteration rotated counterclockwise 90 degrees
 
-![HilbertSecondOrderConstruction1](assets/HilbertSecondOrderConstruction1.svg "Second order Hilbert Curve part 1")
+![HilbertSecondOrderConstruction1](assets/hilbertSecondOrderConstruction1.svg "Second order Hilbert Curve part 1")
+
 Then the curve extends down and connects to another instance of the previous iteration
 
-![HilbertSecondOrderConstruction2](assets/HilbertSecondOrderConstruction2.svg "Second order Hilbert Curve part 2")
+![HilbertSecondOrderConstruction2](assets/hilbertSecondOrderConstruction2.svg "Second order Hilbert Curve part 2")
+
 Then the curve extends right and connects to another instance of the previous iteration
 
-![HilbertSecondOrderConstruction3](assets/HilbertSecondOrderConstruction3.svg "Second order Hilbert Curve part 3")
+![HilbertSecondOrderConstruction3](assets/hilbertSecondOrderConstruction3.svg "Second order Hilbert Curve part 3")
+
 Finally, the curve extends upward and connects to the last instance of the previous iteration, rotated 90 degrees clockwise
 
-![HilbertSecondOrderConstruction4](assets/HilbertSecondOrderConstruction4.svg "Second order Hilbert Curve part 4")
+![HilbertSecondOrderConstruction4](assets/hilbertSecondOrderConstruction4.svg "Second order Hilbert Curve part 4")
+
 The easiest way to draw this by hand, in my opinion, is to draw the four copies of the previous iteration, then connect them like so:
 
-![HilbertSecondOrderConstruction5](assets/HilbertSecondOrderConstruction5.svg "Second order Hilbert Curve part 5")
+![HilbertSecondOrderConstruction5](assets/hilbertSecondOrderConstruction5.svg "Second order Hilbert Curve part 5")
 
 With this simple ruleset, the Hilbert curve can recurse into itself with increasing complexity. Here is a simple function in Javascript to create Hilbert curves:
 
@@ -209,13 +214,13 @@ Now, we can plug the results of this function into an SVG file like:
 ```
 To create some higher-order Hilbert curves. A seventh order curve for example:
 
-![HilbertSeventhOrder](assets/HilbertSeventhOrder.svg "Seventh order Hilbert curve")
+![HilbertSeventhOrder](assets/hilbertSeventhOrder.svg "Seventh order Hilbert curve")
 
 ### Advanced Visualization
 
 The SVG files generated thus far are good for understanding the structure of the Hilbert curve, but it's possible to do more with the list of strokes than draw straight lines. We can model the construction of a Hilbert curve as being composed of three shapes: a straight piece, a counter-clockwise bend, and a clockwise bend.
 
-![HilbertThirdOrder](assets/HilbertThirdOrder.svg "Third order Hilbert curve")
+![HilbertThirdOrder](assets/hilbertThirdOrder.svg "Third order Hilbert curve")
 
 In the above image, the counter-clockwise bend is highlighted in red, the clockwise bend is highlighted in green, and the straight piece is highlighted in blue. It might seem like the bend are just rotations of one another. That is true IF we do not care about directionality. But the strokes being generated DO care about directionality. 
 
